@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicolás | Portafolio Profesional</title>
+  <meta name="description" content="Portafolio profesional de Nicolás: formación, proyectos, lenguajes de programación y áreas de interés.">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio"><span class="brand-mark">&lt;N/&gt;</span> Nicolás</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#estudios">Estudios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lenguajes">Lenguajes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#intereses">Intereses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="themeToggle" class="btn btn-sm btn-outline-secondary rounded-circle theme-btn" type="button" aria-label="Cambiar tema">
+              <i class="bi bi-moon-stars"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header id="inicio" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 order-2 order-lg-1 text-center text-lg-start">
+          <p class="eyebrow mb-2">Hola, soy</p>
+          <h1 class="display-4 fw-bold mb-3">Nicolás <span class="text-accent">[Apellido]</span></h1>
+          <p class="lead mb-4">Estudiante de <strong>[Programa académico]</strong> en Unilasallista, enfocado en construir software útil, limpio y bien diseñado.</p>
+          <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+            <a href="#proyectos" class="btn btn-accent btn-lg px-4"><i class="bi bi-briefcase me-2"></i>Ver proyectos</a>
+            <a href="#contacto" class="btn btn-outline-secondary btn-lg px-4"><i class="bi bi-envelope me-2"></i>Contactar</a>
+          </div>
+          <div class="social mt-4 d-flex gap-3 justify-content-center justify-content-lg-start">
+            <a href="https://github.com/nicolasravem-design" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:nicolas.ravem@gmail.com" aria-label="Correo"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center">
+          <div class="avatar-wrap mx-auto">
+            <!-- Reemplaza por <img src="assets/foto.jpg" alt="Foto de Nicolás" class="avatar"> -->
+            <div class="avatar avatar-initials">N</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#sobre-mi" class="scroll-hint d-none d-md-block" aria-label="Bajar"><i class="bi bi-chevron-down"></i></a>
+  </header>
+
+  <main>
+    <!-- ===================== a. INFORMACIÓN PERSONAL ===================== -->
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2>Sobre mí</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <p class="fs-5">
+              [Escribe aquí 2–3 frases sobre ti: quién eres, qué te motiva y qué tipo de rol buscas.
+              Ejemplo: Soy estudiante de Ingeniería Informática apasionado por el desarrollo web y la
+              resolución de problemas. Me gusta aprender tecnologías nuevas y trabajar en equipo.]
+            </p>
+            <p class="text-body-secondary">
+              [Opcional: un segundo párrafo con fortalezas personales, por ejemplo responsabilidad,
+              comunicación, autoaprendizaje.]
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="card info-card h-100">
+              <div class="card-body">
+                <ul class="list-unstyled info-list mb-0">
+                  <li><i class="bi bi-person"></i><span><small>Nombre</small>Nicolás [Apellido]</span></li>
+                  <li><i class="bi bi-geo-alt"></i><span><small>Ubicación</small>[Ciudad], Colombia</span></li>
+                  <li><i class="bi bi-envelope"></i><span><small>Correo</small><a href="mailto:nicolas.ravem@gmail.com">nicolas.ravem@gmail.com</a></span></li>
+                  <li><i class="bi bi-mortarboard"></i><span><small>Institución</small>Unilasallista</span></li>
+                  <li><i class="bi bi-translate"></i><span><small>Idiomas</small>Español (nativo) · Inglés ([nivel])</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== b. ESTUDIOS REALIZADOS ===================== -->
+    <section id="estudios" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2>Estudios realizados</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-wrap justify-content-between gap-2 mb-1">
+                  <h3 class="h5 mb-0">[Programa académico]</h3>
+                  <span class="badge text-bg-accent">[Año] – Actualidad</span>
+                </div>
+                <p class="mb-2 text-body-secondary"><i class="bi bi-building me-1"></i>Corporación Universitaria Lasallista (Unilasallista)</p>
+                <p class="mb-0">[Semestre actual y asignaturas o logros destacados.]</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-wrap justify-content-between gap-2 mb-1">
+                  <h3 class="h5 mb-0">[Curso / Certificación]</h3>
+                  <span class="badge text-bg-accent">[Año]</span>
+                </div>
+                <p class="mb-2 text-body-secondary"><i class="bi bi-building me-1"></i>[Plataforma o institución: SENA, Platzi, Coursera…]</p>
+                <p class="mb-0">[Breve descripción de lo aprendido.]</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-wrap justify-content-between gap-2 mb-1">
+                  <h3 class="h5 mb-0">Bachiller [Académico / Técnico]</h3>
+                  <span class="badge text-bg-accent">[Año]</span>
+                </div>
+                <p class="mb-0 text-body-secondary"><i class="bi bi-building me-1"></i>[Nombre del colegio]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== c. PROYECTOS / EXPERIENCIA ===================== -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2>Proyectos y experiencia</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card project-card h-100">
+              <div class="project-thumb"><i class="bi bi-window-stack"></i></div>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Portafolio profesional</h3>
+                <p class="text-body-secondary">Sitio web responsive para presentar mi perfil, formación y proyectos. Desplegado con GitHub Pages.</p>
+                <div class="tags mt-auto mb-3">
+                  <span>HTML</span><span>CSS</span><span>Bootstrap 5</span><span>JavaScript</span>
+                </div>
+                <a href="https://github.com/nicolasravem-design" class="stretched-link link-accent" target="_blank" rel="noopener">Ver código <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card project-card h-100">
+              <div class="project-thumb"><i class="bi bi-database"></i></div>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">[Nombre del proyecto 2]</h3>
+                <p class="text-body-secondary">[Qué problema resuelve, tu rol y el resultado. Ej: proyecto de clase, app de gestión, API…]</p>
+                <div class="tags mt-auto mb-3">
+                  <span>[Tecnología]</span><span>[Tecnología]</span>
+                </div>
+                <a href="#" class="stretched-link link-accent">Ver más <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card project-card h-100">
+              <div class="project-thumb"><i class="bi bi-cpu"></i></div>
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">[Nombre del proyecto 3 / Experiencia laboral]</h3>
+                <p class="text-body-secondary">[Empresa o contexto, fechas y responsabilidades principales.]</p>
+                <div class="tags mt-auto mb-3">
+                  <span>[Tecnología]</span><span>[Tecnología]</span>
+                </div>
+                <a href="#" class="stretched-link link-accent">Ver más <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== d. LENGUAJES DE PROGRAMACIÓN ===================== -->
+    <section id="lenguajes" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2>Lenguajes y tecnologías</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <h3 class="h6 text-uppercase text-body-secondary mb-3">Lenguajes de programación</h3>
+            <div class="skill">
+              <div class="d-flex justify-content-between"><span><i class="bi bi-filetype-py me-2"></i>Python</span><span class="skill-level">Avanzado</span></div>
+              <div class="progress" role="progressbar" aria-label="Python" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="--w:80%"></div></div>
+            </div>
+            <div class="skill">
+              <div class="d-flex justify-content-between"><span><i class="bi bi-filetype-js me-2"></i>JavaScript</span><span class="skill-level">Intermedio</span></div>
+              <div class="progress" role="progressbar" aria-label="JavaScript" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="--w:65%"></div></div>
+            </div>
+            <div class="skill">
+              <div class="d-flex justify-content-between"><span><i class="bi bi-cup-hot me-2"></i>Java</span><span class="skill-level">Intermedio</span></div>
+              <div class="progress" role="progressbar" aria-label="Java" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="--w:60%"></div></div>
+            </div>
+            <div class="skill">
+              <div class="d-flex justify-content-between"><span><i class="bi bi-filetype-sql me-2"></i>SQL</span><span class="skill-level">Intermedio</span></div>
+              <div class="progress" role="progressbar" aria-label="SQL" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="--w:60%"></div></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <h3 class="h6 text-uppercase text-body-secondary mb-3">Web y herramientas</h3>
+            <div class="row row-cols-2 row-cols-sm-3 g-3">
+              <div class="col"><div class="tool"><i class="bi bi-filetype-html"></i>HTML5</div></div>
+              <div class="col"><div class="tool"><i class="bi bi-filetype-css"></i>CSS3</div></div>
+              <div class="col"><div class="tool"><i class="bi bi-bootstrap"></i>Bootstrap</div></div>
+              <div class="col"><div class="tool"><i class="bi bi-git"></i>Git</div></div>
+              <div class="col"><div class="tool"><i class="bi bi-github"></i>GitHub</div></div>
+              <div class="col"><div class="tool"><i class="bi bi-code-square"></i>VS Code</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== e. ÁREAS DE INTERÉS ===================== -->
+    <section id="intereses" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">05</span>
+          <h2>Áreas de interés profesional</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="interest h-100">
+              <i class="bi bi-globe2"></i>
+              <h3 class="h6">Desarrollo web</h3>
+              <p>Aplicaciones frontend y backend modernas, accesibles y responsive.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="interest h-100">
+              <i class="bi bi-robot"></i>
+              <h3 class="h6">Inteligencia artificial</h3>
+              <p>Ciencia de datos, aprendizaje automático y automatización de procesos.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="interest h-100">
+              <i class="bi bi-shield-lock"></i>
+              <h3 class="h6">Ciberseguridad</h3>
+              <p>Buenas prácticas de desarrollo seguro y protección de la información.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="interest h-100">
+              <i class="bi bi-cloud"></i>
+              <h3 class="h6">Cloud y DevOps</h3>
+              <p>Despliegue continuo, contenedores y servicios en la nube.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section id="contacto" class="section section-alt">
+      <div class="container">
+        <div class="cta text-center mx-auto">
+          <h2 class="mb-3">¿Trabajamos juntos?</h2>
+          <p class="text-body-secondary mb-4">Estoy abierto a prácticas, proyectos y oportunidades laborales. Escríbeme y te responderé pronto.</p>
+          <a href="mailto:nicolas.ravem@gmail.com" class="btn btn-accent btn-lg px-4"><i class="bi bi-send me-2"></i>nicolas.ravem@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <small class="text-body-secondary">© <span id="year"></span> Nicolás [Apellido]. Hecho con Bootstrap 5.</small>
+      <div class="social d-flex gap-3">
+        <a href="https://github.com/nicolasravem-design" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:nicolas.ravem@gmail.com" aria-label="Correo"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
