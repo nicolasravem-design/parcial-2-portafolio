@@ -312,7 +312,7 @@ p { text-wrap: pretty; }
     position: absolute; left: 26px; top: 50%;
     transform: translate(-6px, -50%);
     white-space: nowrap;
-    font-family: var(--f-mono); font-size: var(--t-small); font-stretch: 87.5%; font-weight: 500;
+    font-size: var(--t-small); font-stretch: 108%; font-weight: 600;
     background: var(--text); color: var(--bg);
     padding: 0.45em 0.65em; border-radius: var(--radius);
     opacity: 0; pointer-events: none;
@@ -728,5 +728,6 @@ p { text-wrap: pretty; }
 .split-line { padding: 0.14em 0 0.06em; margin: -0.14em 0 -0.06em; }
 
 @media (prefers-reduced-motion: reduce) {
+  html:not(.lenis) { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
