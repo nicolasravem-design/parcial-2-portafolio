@@ -1,41 +1,68 @@
-// Año actual en el footer
+// Año en el pie
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Sombra del navbar al hacer scroll
-const nav = document.getElementById("mainNav");
-const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 10);
-window.addEventListener("scroll", onScroll, { passive: true });
-onScroll();
-
 // Cerrar el menú móvil al elegir una sección
-const navMenu = document.getElementById("navMenu");
-document.querySelectorAll("#navMenu .nav-link").forEach((link) => {
+const menu = document.getElementById("menu");
+document.querySelectorAll("#menu .nav-link").forEach((link) => {
   link.addEventListener("click", () => {
-    if (navMenu.classList.contains("show")) bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
+    if (menu.classList.contains("show")) bootstrap.Collapse.getOrCreateInstance(menu).hide();
   });
 });
 
-// Tema claro / oscuro (se recuerda en el navegador)
+// Grafo de versiones: sección activa, progreso del lomo y del menú
 const root = document.documentElement;
-const themeBtn = document.getElementById("themeToggle");
-const setTheme = (theme) => {
-  root.setAttribute("data-bs-theme", theme);
-  themeBtn.innerHTML = theme === "dark" ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon-stars"></i>';
-  try { localStorage.setItem("theme", theme); } catch (e) {}
-};
-let saved = null;
-try { saved = localStorage.getItem("theme"); } catch (e) {}
-setTheme(saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
-themeBtn.addEventListener("click", () => setTheme(root.getAttribute("data-bs-theme") === "dark" ? "light" : "dark"));
+const sections = [...document.querySelectorAll("[data-section]")];
+const spineLinks = [...document.querySelectorAll(".spine-nodes a")];
+const navLinks = [...document.querySelectorAll("#menu .nav-link")];
+let ticking = false;
 
-// Animaciones al entrar en pantalla
-document.querySelectorAll(".section .card, .interest, .tool, .skill, .section-head").forEach((el) => el.classList.add("reveal"));
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("in");
-      observer.unobserve(entry.target);
-    }
+function update() {
+  ticking = false;
+  const probe = window.scrollY + window.innerHeight * 0.4;
+  const atBottom = window.innerHeight + window.scrollY >= root.scrollHeight - 2;
+
+  let index = 0;
+  sections.forEach((section, i) => {
+    if (section.offsetTop <= probe) index = i;
   });
-}, { threshold: 0.15 });
-document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  if (atBottom) index = sections.length - 1;
+
+  const current = sections[index];
+  const next = sections[index + 1];
+  const span = (next ? next.offsetTop : root.scrollHeight) - current.offsetTop;
+  const within = atBottom ? 0 : Math.min(Math.max((probe - current.offsetTop) / span, 0), 1);
+  const spineProgress = Math.min((index + within) / (sections.length - 1), 1);
+  const docProgress = window.scrollY / Math.max(root.scrollHeight - window.innerHeight, 1);
+
+  root.style.setProperty("--spine-p", spineProgress.toFixed(4));
+  root.style.setProperty("--doc-p", docProgress.toFixed(4));
+
+  spineLinks.forEach((link, i) => {
+    link.classList.toggle("is-active", i === index);
+    link.classList.toggle("is-passed", i < index);
+    if (i === index) link.setAttribute("aria-current", "true");
+    else link.removeAttribute("aria-current");
+  });
+
+  sections.forEach((section, i) => section.classList.toggle("is-active", i === index));
+
+  const id = current.id;
+  navLinks.forEach((link) => {
+    const active = link.getAttribute("href") === `#${id}`;
+    link.classList.toggle("active", active);
+    if (active) link.setAttribute("aria-current", "true");
+    else link.removeAttribute("aria-current");
+  });
+}
+
+function requestUpdate() {
+  if (!ticking) {
+    ticking = true;
+    requestAnimationFrame(update);
+  }
+}
+
+window.addEventListener("scroll", requestUpdate, { passive: true });
+window.addEventListener("resize", requestUpdate);
+window.addEventListener("load", update);
+update();
