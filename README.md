@@ -23,7 +23,20 @@ La carrera se presenta como unas **notas de versión** de software: cada etapa e
 - HTML5, CSS3 y JavaScript sin paso de compilación
 - [Bootstrap 5.3](https://getbootstrap.com/): grid (`col-12`, `col-md-*`, `col-lg-*`), navbar colapsable, botones y utilidades
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
+- [GSAP 3.13](https://gsap.com/) con ScrollTrigger y SplitText: animaciones ligadas al scroll
+- [Lenis](https://lenis.darkroom.engineering/): scroll suave
 - Fuentes: Archivo (ancho y peso variables) y Martian Mono, de Google Fonts
+
+## Diseño y movimiento
+
+Tema oscuro: fondo casi negro, franjas de sección en azul tinta y amarillo solo para lo que está "vivo" (la versión actual y los proyectos publicados).
+
+- Al cargar, la versión se "publica": el nombre sube letra a letra, la etiqueta v5.0 se sella y las líneas `+` se añaden con un destello verde.
+- La línea de Estudios se dibuja mientras haces scroll.
+- Las cifras de los proyectos cuentan hasta su valor real (0,466 → 0,641).
+- La palabra "Python" se ensancha al pasar, usando el eje de ancho de la fuente variable.
+- La captura de Esthetic dental se carga de arriba abajo.
+- Si el sistema pide reducir el movimiento, todo esto se desactiva.
 
 ## Responsive
 
